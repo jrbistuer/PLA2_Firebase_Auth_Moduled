@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "testsamplecifo05": {
+      "hosting": {
+        "testfirebase": [
+          "testsamplecifo05"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "testsamplecifo05"
+  }
+}

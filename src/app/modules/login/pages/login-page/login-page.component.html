@@ -1,0 +1,22 @@
+<h1>LOGIN</h1>
+
+<div>
+
+    <form (ngSubmit)="login()" [formGroup]="credentials">
+		<div fill="solid" class="ion-margin-bottom">
+			<input type="email" placeholder="Email" formControlName="email"/>
+			<div slot="error" *ngIf="(email?.dirty || email?.touched) && email?.errors"
+				>Email is invalid</div>
+        </div>
+		<div fill="solid" class="ion-margin-bottom">
+			<input type="password" placeholder="Password" formControlName="password"/>
+			<div slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors"
+				>Password needs to be 6 characters</div>
+        </div>
+
+		<button type="submit" expand="block" [disabled]="!credentials.valid">Log in</button>
+		<button type="button" expand="block" color="secondary" (click)="register()"
+			>Create account</button>
+	</form>
+
+</div>
